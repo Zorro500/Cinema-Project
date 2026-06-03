@@ -1,0 +1,63 @@
+/* Footer.module.css */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 15px 60px;
+  background: radial-gradient(circle at 0% 50%, #aa4aff 0%, #6b1a5e 35%, #2d0a2a 65%, #000000 100%);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  margin: 25px 20px;
+}
+
+.footer-kontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-kontent p {
+  color: #d4b0ff;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.footer-kontent a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.footer-kontent a:hover {
+  color: #ff8af5;
+  text-decoration: underline;
+  background: rgba(255, 138, 245, 0.1);
+}
+
+/* Социальные иконки (можно добавить, если нужно) */
+.footer-kontent:last-child a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+

@@ -1,0 +1,33 @@
+.profInf{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 25px;
+    gap: 10px;
+background: linear-gradient(180deg, rgba(7, 11, 23, 0.85), #3a0644);
+backdrop-filter: blur(12px);
+
+border-bottom: 1px solid rgba(255,255,255,0.06);
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
+border-radius: 5px;
+}
+.profInf img{
+    width: 150px;
+    height: auto;
+    border-radius: 70px;
+}
+h2{
+    color: white;
+}
+.us-inf{
+display: flex;
+color: white;
+gap: 30px;
+}
+.us-inf div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}

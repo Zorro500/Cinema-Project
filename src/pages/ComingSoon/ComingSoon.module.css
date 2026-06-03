@@ -1,0 +1,122 @@
+/* Новости — без анимации, строгий стиль */
+
+.newsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 0 20px;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Заголовок для новостей */
+.newsContainer h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #ffffff, #ff8af5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.newsCard {
+  display: flex;
+  gap: 30px;
+  padding: 25px;
+  background: linear-gradient(180deg, rgba(7, 11, 23, 0.85), #2a0a35);
+  backdrop-filter: blur(12px);
+  margin: 15px 0;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Изображение новости */
+.newsCard img {
+  height: 220px;
+  width: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+/* Контент новости */
+.newsCard .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsCard h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: white;
+  letter-spacing: -0.3px;
+}
+
+.newsCard p {
+  font-size: 0.95rem;
+  color: #cfc6f0;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+/* Дата новости */
+.newsCard .date {
+  font-size: 0.75rem;
+  color: #ff8af5;
+  margin-bottom: 12px;
+  display: inline-block;
+  background: rgba(255, 138, 245, 0.15);
+  border: 1px solid rgba(255, 138, 245, 0.3);
+  border-radius: 30px;
+  padding: 4px 14px;
+  width: fit-content;
+}
+
+/* Ссылка "Подробнее" */
+.newsCard a {
+  text-decoration: none;
+  color: #ff8af5;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin-top: 8px;
+}
+
+.newsCard a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Разделитель между карточками */
+.newsCard:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+  .newsContainer {
+    margin-top: 100px;
+  }
+  
+  .newsCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .newsCard img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+  }
+}

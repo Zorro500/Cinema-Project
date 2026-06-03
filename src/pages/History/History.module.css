@@ -1,0 +1,196 @@
+/* History.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Заголовок */
+.container > h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  background: linear-gradient(135deg, #fff, #ff8af5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Контейнер кнопок сортировки */
+.sortContainer {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Кнопки сортировки */
+.sort {
+  background: linear-gradient(135deg, #1a1a2e, #0f0f1a);
+  border: 1px solid rgba(255, 138, 245, 0.3);
+  border-radius: 40px;
+  padding: 10px 24px;
+  color: #e0d4ff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sort:hover {
+  background: rgba(255, 138, 245, 0.2);
+  border-color: #ff8af5;
+  color: #ff8af5;
+  transform: translateY(-2px);
+}
+
+/* Ссылка-обёртка */
+.linkFavorit {
+  text-decoration: none;
+  display: block;
+}
+
+/* Карточка истории */
+.histaryCard {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: linear-gradient(135deg, rgba(18, 22, 45, 0.95), rgba(35, 15, 55, 0.95));
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.histaryCard:hover {
+  transform: translateX(8px);
+  border-color: rgba(255, 138, 245, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Постер фильма */
+.histaryCard img {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+/* Блок с рейтингом и названием */
+.histaryCard > div:first-of-type {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Рейтинг */
+.rating {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  padding: 5px 12px;
+  border-radius: 30px;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 14px;
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  margin-bottom: 10px;
+}
+
+/* Название фильма */
+.histaryCard h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.histaryCard:hover h1 {
+  color: #ff8af5;
+}
+
+/* Блок с датой и временем */
+.histaryCard > div:last-child {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.histaryCard > div:last-child p {
+  color: #b9a9e0;
+  font-size: 13px;
+  margin: 6px 0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.histaryCard > div:last-child p:first-child {
+  color: #ffd700;
+}
+
+/* Пустое состояние (когда истории нет) */
+.emptyHistory {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(18, 22, 45, 0.95), rgba(35, 15, 55, 0.95));
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.emptyHistory p {
+  color: #b9a9e0;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.emptyHistory a {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff8af5, #c084fc);
+  padding: 12px 28px;
+  border-radius: 40px;
+  color: #1a1a2e;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.emptyHistory a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 138, 245, 0.4);
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 700px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .histaryCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .histaryCard > div:last-child {
+    text-align: center;
+  }
+  
+  .histaryCard > div:first-of-type {
+    text-align: center;
+  }
+  
+  .sortContainer {
+    justify-content: center;
+  }
+  
+  .sort {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+}
